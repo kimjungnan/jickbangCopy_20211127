@@ -8,6 +8,7 @@ import com.neppplus.jickbangcopy_20211127.datas.RoomData
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+    // comment2 브랜치 작업 테스트
     
     val mRoomList = ArrayList<RoomData>()
 
