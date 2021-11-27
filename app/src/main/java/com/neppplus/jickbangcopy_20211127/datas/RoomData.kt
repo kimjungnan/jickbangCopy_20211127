@@ -13,12 +13,18 @@ class RoomData(
 
 
 //    층수도 가공해서 String으로 주자
-   // fun getFormattedFloor() : String {
+    fun getFormattedFloor() : String {
+
+        if( this.floor > 0 ) {
+            return "${this.floor}층"
+        }else if( this.floor ==0 ) {
+            return "반지하"
+        }else {
+            return "지하 ${-this.floor}층" //-2 : - 떼서 지하 2층
+        }
 
 
-
-
-    //}
+    }
 
 
 }
