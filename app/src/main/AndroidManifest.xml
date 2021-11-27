@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.neppplus.jickbangcopy_20211127">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_jickbang"
@@ -10,16 +13,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JickbangCopy_20211127">
         <activity
-            android:name=".ViewRoomDetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".activity_Splash"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ViewRoomDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
         </activity>
     </application>
 
