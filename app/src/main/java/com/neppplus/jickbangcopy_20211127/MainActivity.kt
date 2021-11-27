@@ -8,7 +8,9 @@ import com.neppplus.jickbangcopy_20211127.datas.RoomData
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    
+
+    // 방목록 담기 위한 그릇  comment01_20211127_branch
+
     val mRoomList = ArrayList<RoomData>()
 
     lateinit var mRoomAdater: RoomAdater
