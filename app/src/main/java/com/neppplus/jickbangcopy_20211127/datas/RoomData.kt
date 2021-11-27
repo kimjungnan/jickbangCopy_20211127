@@ -8,6 +8,17 @@ class RoomData(
 
 ) {
 
+//    방데이터 기능 : 가격 가공해서 String으로 주는 기능 => 리스트뷰/상세화면 두군데에서 사용
+
+
+
+//    층수도 가공해서 String으로 주자
+   // fun getFormattedFloor() : String {
+
+
+
+
+    //}
 
 
 }

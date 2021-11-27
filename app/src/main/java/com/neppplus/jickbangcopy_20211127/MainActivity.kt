@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.neppplus.jickbangcopy_20211127.datas.RoomAdater
 import com.neppplus.jickbangcopy_20211127.datas.RoomData
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     
@@ -28,8 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         mRoomAdater = RoomAdater(this, R.layout.room_list_item, mRoomList)
 
-        roomListView.adater = mRoomAdater
-
+        roomListView.adapter = mRoomAdater
 
 
     }

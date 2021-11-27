@@ -22,8 +22,7 @@ class RoomAdater(
         var tempRow = convertView
 
         if(tempRow == null){
-
-            tempRow = mInflater.inflate( R.layout.room_list_item, root:null)
+            tempRow = mInflater.inflate(R.layout.room_list_item, null)
         }
 
         val row = tempRow!!
@@ -34,6 +33,7 @@ class RoomAdater(
         val txtAddressAndFloor = row.findViewById<TextView>(R.id.txtAddressAndFloor)
         val txtDescription = row.findViewById<TextView>(R.id.txtDescription)
 
+        txtDescription.text = data.descrition
 
 
         return row
