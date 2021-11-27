@@ -33,7 +33,7 @@ class RoomAdater(
         val txtAddressAndFloor = row.findViewById<TextView>(R.id.txtAddressAndFloor)
         val txtDescription = row.findViewById<TextView>(R.id.txtDescription)
 
-
+        txtPrice.text = data.getFormattedPrice()
         txtAddressAndFloor.text = "${data.address}, ${data.getFormattedFloor()}"
         txtDescription.text = data.descrition
 
