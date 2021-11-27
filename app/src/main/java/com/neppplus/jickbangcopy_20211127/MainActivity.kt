@@ -17,7 +17,32 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        
+
+//        함수화 해서 정리하여 구현
+        setupEvents()
+        setValues()
+
+
+    }
+
+    fun setupEvents(){
+
+        roomListView.setOnItemClickListener { adapterView, view, position, l ->
+
+            val clickedRoom = mRoomList[position]
+
+            val myIntent = Intent( this, ViewRoomDetailActivity::class.java)
+
+            myIntent.putExtra("room",clickedRoom)
+
+            startActivity(myIntent)
+
+        }
+
+    }
+
+    fun setValues() {
+
         mRoomList.add(RoomData(8000, "서울시 동대문구", 5, "1번째 방입니다."))
         mRoomList.add(RoomData(12000, "서울시 용산구", 10, "2번째 방입니다."))
         mRoomList.add(RoomData(5000, "서울시 서대문구", 8, "3번째 방입니다."))
@@ -33,19 +58,8 @@ class MainActivity : AppCompatActivity() {
 
         roomListView.adapter = mRoomAdater
 
-        roomListView.setOnItemClickListener { adapterView, view, position, l ->
-
-         val clickedRoom = mRoomList[position]
-
-         val myIntent = Intent( this, ViewRoomDetailActivity::class.java)
-
-            myIntent.putExtra("room",clickedRoom)
-
-            startActivity(myIntent)
-
-        }
-
-
 
     }
+
+
 }
